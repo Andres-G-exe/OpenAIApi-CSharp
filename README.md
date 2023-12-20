@@ -13,7 +13,7 @@ This C# library provides a convenient way to interact with the OpenAI API, allow
 
 ```csharp
 // Initialize the OpenAIApi with your API key
-var openAIApi = new OpenAIApi("YOUR_OPENAI_API_KEY");
+var openAIApi = new OpenAIApi.OpenAIApi("YOUR_OPENAI_API_KEY");
 
 // Create a chat client
 var chatClient = openAIApi.Chat;
@@ -24,7 +24,7 @@ chatClient.AddAssistantMessage("Hi there! How can I help you today?");
 chatClient.AddUserMessage("Tell me a joke");
 
 // Get chat completion response
-var completionResponse = await chatClient.GetChatCompletion;
+var completionResponse = await chatClient.GetChatCompletion();
 
 // Get response content
 Console.WriteLine(completionResponse.Choices[0].Message.Content);
@@ -34,7 +34,7 @@ Console.WriteLine(completionResponse.Choices[0].Message.Content);
 
 ```csharp
 // Initialize the OpenAIApi with your API key
-var openAIApi = new OpenAIApi("YOUR_OPENAI_API_KEY");
+var openAIApi = new OpenAIApi.OpenAIApi("YOUR_OPENAI_API_KEY");
 
 // Create a transcription client
 var transcriptionClient = openAIApi.Transcription;
